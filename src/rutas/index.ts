@@ -1,9 +1,9 @@
 import express from 'express';
 
-import saludarRuta from './hola.ruta';
+import clientesRutas from './clientes.rutas';
 
 const app = express();
 
-app.use('/v1/prueba', saludarRuta);
+app.use('/v1/clientes', clientesRutas);
 
 export default app;

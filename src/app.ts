@@ -5,6 +5,7 @@ import { CONFIG } from './config';
 
 const app: express.Application = express();
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/api', routes);
