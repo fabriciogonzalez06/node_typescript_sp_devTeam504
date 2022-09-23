@@ -42,8 +42,6 @@ class Conexion {
           consulta.input(elemento.nombre, elemento.tipo, elemento.valor);
         });
 
-        let respuesta: sql.IProcedureResult<any>;
-
         const { returnValue, recordset } = await consulta.execute(procedimiento);
 
         switch (returnValue) {
@@ -60,7 +58,8 @@ class Conexion {
             break;
 
           default:
-            resolve(recordset);
+            console.log('returnedValue SP no esperado', recordset[0]);
+            reject(new HttpRespuestaError('Respuesta SP no esperada', 500));
             break;
         }
       } catch ({ message, statusCode = 500 }) {

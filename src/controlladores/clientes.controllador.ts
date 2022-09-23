@@ -86,7 +86,7 @@ export const crearCliente = async (req: Request, res: Response) => {
 
     const resultado = await conexion.Ejecutar('sp_cliente_crear', parametros);
 
-    return res.status(201).send(resultado);
+    return res.status(201).send(resultado[0]);
   } catch ({ message, statusCode = 500 }) {
     return res.status(statusCode).send({ mensaje: message });
   }
