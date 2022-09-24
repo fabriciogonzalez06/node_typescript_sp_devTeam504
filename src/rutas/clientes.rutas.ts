@@ -5,7 +5,7 @@ import {
   obtenerCliente,
   actualizarCliente,
   eliminarCliente
-} from '../controlladores/clientes.controllador';
+} from '../controladores/clientes.controlador';
 
 const router = Router();
 

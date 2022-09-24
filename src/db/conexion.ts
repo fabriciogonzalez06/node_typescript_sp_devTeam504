@@ -1,5 +1,6 @@
 import * as sql from 'mssql';
 import { CONFIG } from '../config';
+import { IParametro } from '../interfaces/db.interfaz';
 import { HttpRespuestaError } from '../utilidades/httpRespuestaError';
 
 class Conexion {
@@ -23,7 +24,7 @@ class Conexion {
     };
   }
 
-  async Ejecutar(procedimiento: string, parametros: any[] = []): Promise<any> {
+  async Ejecutar(procedimiento: string, parametros: IParametro[] = []): Promise<any> {
     return new Promise(async (resolve, reject) => {
       let pool!: sql.ConnectionPool;
 

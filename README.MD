@@ -5,8 +5,9 @@ Proyecto REST API NodeJS con Typscript para usar procedimientos almacenados con 
 ## Consideraciones
 
 - Crear un usuario para acceder a la base de en datos SQL-Server( ó habilitar el usuario [sa](https://www.youtube.com/watch?v=wF1fnziprGc))
-- Verificar que se tenga acceso via puerto TCP/IP habilitado para SQL-Server (revisar)[https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port?view=sql-server-ver16]
-- Verificar que los puertos no se generen de manera dinamica
+- Verificar que se tenga acceso via puerto TCP/IP habilitado para SQL-Server (
+  [revisar](https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port?view=sql-server-ver16))
+- Verificar que los puertos no se generen de manera dinamica (SQL-Server)
 
 - Instalar [NodeJS](https://nodejs.org/en/)
 

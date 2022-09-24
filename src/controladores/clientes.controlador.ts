@@ -3,6 +3,7 @@ import * as yup from 'yup';
 import * as sql from 'mssql';
 
 import Conexion from '../db/conexion';
+import { IParametro } from '../interfaces/db.interfaz';
 
 export const listarClientes = async (req: Request, res: Response) => {
   try {
@@ -22,7 +23,7 @@ export const obtenerCliente = async (req: Request, res: Response) => {
 
     const { id } = req.params;
 
-    const parametros = [
+    const parametros: IParametro[] = [
       {
         nombre: 'id_cliente',
         tipo: sql.VarChar,
@@ -61,7 +62,7 @@ export const crearCliente = async (req: Request, res: Response) => {
   try {
     const conexion = new Conexion();
 
-    const parametros = [
+    const parametros: IParametro[] = [
       {
         nombre: 'nombres',
         tipo: sql.VarChar,
@@ -111,7 +112,7 @@ export const actualizarCliente = async (req: Request, res: Response) => {
   try {
     const conexion = new Conexion();
 
-    const parametros = [
+    const parametros: IParametro[] = [
       {
         nombre: 'id_cliente',
         tipo: sql.Int,
@@ -148,7 +149,7 @@ export const eliminarCliente = async (req: Request, res: Response) => {
 
     const { id } = req.params;
 
-    const parametros = [
+    const parametros: IParametro[] = [
       {
         nombre: 'id_cliente',
         tipo: sql.VarChar,
